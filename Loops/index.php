@@ -30,7 +30,7 @@ function lcmRange($start, $end){
         }        
     }
 }
-// The found increasement will be printed through calling the function.
+// The found multiple will be printed through calling the function.
 echo lcmRange(1,20);
 ?>
 </body>
