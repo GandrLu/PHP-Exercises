@@ -8,9 +8,9 @@
 </head>
 <body>
 <?php
-// Function for finding the same increasement for a range of two numbers (from $start number to $end number).
-function icmRange($start, $end){
-    // Setting the largest number as first value to be checked if it's the increasement of all numbers in the range.
+// Function for finding the least common multiple for a range of two numbers (from $start number to $end number).
+function lcmRange($start, $end){
+    // Setting the largest number as first value to be checked if it's the multiple of all numbers in the range.
     $checkThis = $end;
     // Infinite loop until a result is found.
     while (true)
@@ -24,14 +24,14 @@ function icmRange($start, $end){
             $checkThis++;
             break;
         }
-        // When all numbers of the range have the to be checked value as increasement, this value will be returned by the function.
+        // When all numbers of the range have the to be checked value as multiple, this value will be returned by the function.
         if ($i==$start){
         return $checkThis;
         }        
     }
 }
 // The found increasement will be printed through calling the function.
-echo icmRange(1,20);
+echo lcmRange(1,20);
 ?>
 </body>
 </html>
