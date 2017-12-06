@@ -1,4 +1,5 @@
 <?php
+session_save_path(__DIR__.DIRECTORY_SEPARATOR.'data');
 session_start();
 
 
@@ -9,8 +10,26 @@ if(isset($_POST['submitLogin']))
 {
     $error = true;
     $user = logIn($error);
+    if(!$error)
+    {
+        $_SESSION['user'] = $user;
+    }
 }
-$loggedIn = false;
+else if (isset($_POST['sumitLogout']))
+{
+    logOut();
+}
+else if (isset($_COOKIE['userId']))
+{
+    $error = true;
+    $user = logIn($error, true);
+    if(!$error)
+    {
+        $_SESSION['user'] = $user;
+    }
+}
+
+$loggedIn = isset($_SESSION['user']);
 
 $title = 'Login';
 $page = isset($_GET['p']) ? $_GET['p'] : '';

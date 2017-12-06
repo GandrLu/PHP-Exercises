@@ -9,19 +9,23 @@
 <div class="right">
     <div>
         <label for="fname">Vorname</label>
-        <input type="text" name="fname" id="fname">
+        <input type="text" name="fname" id="fname"
+        value="<?=htmlspecialchars($user['firstName'])?>">
     </div>
     <div>
         <label for="lname">Nachname</label>
-        <input type="text" name="lname" id="lname">
+        <input type="text" name="lname" id="lname"
+        value="<?=htmlspecialchars($user['lastName'])?>">
     </div>
     <div>
         <label for="email">Benutzername</label>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email"
+        value="<?=htmlspecialchars($user['email'])?>">
     </div>
     <div>
         <label for="username">E-Mail</label>
-        <input type="text" name="username" id="username">
+        <input type="text" name="username" id="username"
+        value="<?=htmlspecialchars($user['username'])?>">
     </div>
     <div>
         <input type="checkbox" name="changePassword" id="changePw"><label for="changePw">Passwort ändern?</label>

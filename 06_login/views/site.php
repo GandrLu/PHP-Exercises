@@ -17,6 +17,7 @@
 <?
 switch ($page) {
     case 'user':
+        $user = user($_SESSION['user']);
         include (VIEWPATH.'/pages/user.php');
         break;
     case 'page1':
