@@ -84,6 +84,7 @@ label {
 input[type="submit"] {
     -webkit-appearance: none;
     -moz-appearance: none;
+    ;
     appearance: none;
     background: var(--orange);
     padding: 9px;

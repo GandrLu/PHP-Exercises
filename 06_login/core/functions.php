@@ -1,7 +1,9 @@
 <?
 
+// get all Users as string.
 function allUsers()
 {
+    // read json from standard database path.
     $dbString = file_get_contents(DATABASE);
     $users = json_decode($dbString, true);
     return $users['users'];
@@ -20,6 +22,7 @@ function user($id)
     return false;
 }
 
+// & means the value is not copied, it is changed directly.
 function logIn(&$error, $rememberMe = false)
 {
     $users = allUsers();
@@ -31,7 +34,7 @@ function logIn(&$error, $rememberMe = false)
     if($rememberMe === true && empty($_POST['validationName']) && empty($_POST['validationPassword']))
     {
         $userId = $_COOKIE['userId'];
-        $password = $_COOKE['password'];
+        $password = $_COOKIE['password'];
     }
 
     foreach ($users as $idx => $userData) 
@@ -84,7 +87,7 @@ function logOut()
 
 function rememberMe($id, $password)
 {
-    $duration = time() + 3600 * 24 * 30;
+    $duration = time() + 3600 * 24 * 30;    // Time of one month in seconds
     setcookie('userId', $id, $duration, '/');
     setcookie('password', $password, $duration, '/');
 }

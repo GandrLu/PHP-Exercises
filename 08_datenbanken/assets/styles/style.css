@@ -1,0 +1,204 @@
+:root {
+    --orange: #c0392b;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Helvetica Neu', 'Helvetica', sans-serif;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
+.title {
+    color: var(--orange);
+    font-size: 1.8em;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 0.9em;
+}
+
+[class*=-form] input[type="text"],
+[class*=-form] input[type="submit"],
+[class*=-form] input[type="password"],
+[class*=-form] input[type="email"],
+[class*=-form] input[type="number"],
+[class*=-form] select {
+    display: block;
+    margin-top: 4px;
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid #CCC;
+}
+
+.login-modal input {
+    margin-bottom: 16px;
+}
+
+[class*=-form] input[type="submit"],
+input[type="submit"],
+button {
+    background: var(--orange);
+    padding: 9px;
+    border-radius: 0;
+    color: white;
+    box-sizing: border-box;
+    border: 3px solid var(--orange);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: none;
+    color: var(--orange);
+}
+
+input[type="submit"]:active,
+button:active {
+    opacity: 0.8;
+}
+
+.clear {
+    clear: both;
+}
+
+nav {
+    background: white;
+}
+
+nav ul {
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+
+nav ul li {
+    height: 40px;
+    display: inline-block;
+    border-color: transparent;
+    transition: border-color 0.35s linear
+}
+
+nav ul li a {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    line-height: 40px;
+}
+
+nav ul li:hover {
+    border-bottom: 3px solid var(--orange);
+}
+
+nav form {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0px 60px;
+    height: 100%;
+}
+
+nav input[type="submit"] {
+    border: 1px solid var(--orange);
+    background: var(--orange);
+    border-radius: 0;
+    color: white;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 20px;
+}
+
+nav input[type="submit"]:hover {
+    background: none;
+    color: var(--orange);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.left {
+    float: left;
+    width: 40%;
+}
+
+.right {
+    float: left;
+    width: 60%;
+    padding: 20px;
+}
+
+.right,
+.left {
+    height: 100%;
+    overflow: auto
+}
+
+.img img {
+    width: 100%;
+}
+
+.form-wrap {
+    background: white;
+    box-shadow: 0 0 10px 0 dimgrey;
+    margin: 20px auto;
+    max-width: 380px;
+    padding: 20px;
+}
+
+.table-wrapper {
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 dimgrey;
+}
+
+table th,
+table td {
+    border: 1px solid rgba(0, 0, 0, .15);
+    padding: 8px;
+}
+
+.error {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    line-height: 25px;
+    padding: 20px;
+    color: #800000;
+    background: #ff7171;
+    text-align: center;
+}
+
+.error span {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.error span:hover {
+    color: white;
+}

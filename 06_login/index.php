@@ -2,7 +2,7 @@
 session_save_path(__DIR__.DIRECTORY_SEPARATOR.'data');
 session_start();
 
-
+// include config and functions to use them.
 require_once './core/config.php'; 
 require_once './core/functions.php'; 
 
@@ -15,7 +15,7 @@ if(isset($_POST['submitLogin']))
         $_SESSION['user'] = $user;
     }
 }
-else if (isset($_POST['sumitLogout']))
+else if (isset($_POST['submitLogout']))
 {
     logOut();
 }
@@ -48,11 +48,11 @@ $page = isset($_GET['p']) ? $_GET['p'] : '';
     <?
     if($loggedIn)
     {
-        include (VIEWPATH.'site.php');
+        include (VIEWPATH.'site.php');  // When user is logged in, he gets the site.
     }
     else
     {
-        include (VIEWPATH.'login.php');
+        include (VIEWPATH.'login.php'); // When user isnt logged in, he gets the login page.
     }
     
     ?>
