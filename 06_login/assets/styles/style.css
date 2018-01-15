@@ -68,6 +68,7 @@ label {
 .login-modal input[type="submit"],
 .login-modal input[type="password"],
 .login-modal input[type="number"],
+.login-modal input[type="email"],
 .login-modal select {
     display: block;
     margin-top: 4px;

@@ -7,7 +7,7 @@
         <form action="<?=$_SERVER['PHP_SELF'].'?p=user';?>" method="post">
             <label for="loginName">Email oder Benutzername</label>
             <input type="text" name="validationName" id="loginName" placeholder="ihre@mail.de"
-            <?=isset($_POST['validationName']) ? 'value="'.htmlspecialchars($_POST['validationName']).'"' : ''?>>
+            <?=isset($_POST['validationName']) ? 'value="'.htmlspecialchars($_POST['validationName']).'"' : ''?>>   <!-- uses htmlspecialchars on the given value.-->
             
             <label for="loginPassword">Passwort</label>
             <input type="password" name="validationPassword" id="loginPassword" placeholder="Passwort">

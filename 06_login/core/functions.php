@@ -22,7 +22,7 @@ function user($id)
     return false;
 }
 
-// & means the value is not copied, it is changed directly.
+// & means the value is not copied, it is changed directly (call by reference).
 function logIn(&$error, $rememberMe = false)
 {
     $users = allUsers();

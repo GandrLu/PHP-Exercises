@@ -1,22 +1,14 @@
 <?php
 
-class BikeType
-
+class BikeType extends BaseModel
 {
     const TABLENAME = '`bikeType`';
-    private $data;
 
-    public function __construct($id, $type)
-    {
-        $this->data['id'] = $id;
-        $this->data['type'] = $type;
-    }
-
-    public function __get($key)
-    {
-        if(isset($this->data[$key]))
-        {
-            return $this->data[$key];
-        }
-    }
+    protected $schema = [
+        'id'          => [ 'type' => BaseModel::TYPE_INT ],
+        'createdAt'   => [ 'type' => BaseModel::TYPE_STRING ],
+        'updatedAt'   => [ 'type' => BaseModel::TYPE_STRING ],
+        'name'        => [ 'type' => BaseModel::TYPE_STRING ],
+    ];
 }
+?>

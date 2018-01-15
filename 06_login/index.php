@@ -1,3 +1,5 @@
+<!-- FRAGE: Wie löscht man sessions die nicht durch logout gelöscht wurden, da sich nicht manuell ausgeloggt wurde? Automatisch? -->
+
 <?php
 session_save_path(__DIR__.DIRECTORY_SEPARATOR.'data');
 session_start();
@@ -49,6 +51,11 @@ $page = isset($_GET['p']) ? $_GET['p'] : '';
     if($loggedIn)
     {
         include (VIEWPATH.'site.php');  // When user is logged in, he gets the site.
+    }
+    elseif($page=='register')
+    {
+        include (VIEWPATH.'register.php');
+
     }
     else
     {

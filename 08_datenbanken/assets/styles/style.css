@@ -172,6 +172,7 @@ main {
 }
 
 .table-wrapper {
+    display: inline-block;
     margin-top: 20px;
     padding: 20px;
     box-shadow: 0 0 10px 0 dimgrey;
@@ -197,6 +198,9 @@ table td {
 .error span {
     cursor: pointer;
     font-weight: bold;
+    position: absolute;
+    top: 0px;
+    left: 10px;
 }
 
 .error span:hover {

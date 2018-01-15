@@ -8,14 +8,14 @@
         <label for="">Typ</label>
         <select name="bikeType" id="">
             <? foreach($bikeTypes as $bikeType) : ?>
-                <option value="<?=$bikeType->id?>"><?=$bikeType->type?></option>
+                <option value="<?=$bikeType['id']?>"><?=$bikeType['name']?></option>
             <? endforeach; ?>
         </select>
 
         <label for="">Kunde</label>
         <select name="customer" id="">
             <? foreach($customers as $customer) : ?>
-                <option value="<?=$customer->id?>"><?=$customer->lastName . ', ' . $customer->firstName?></option>
+                <option value="<?=$customer['id']?>"><?=$customer['lastName'] . ', ' . $customer['firstName']?></option>
             <? endforeach; ?>
         </select>
 
