@@ -1,19 +1,19 @@
-Übung/Aufgabe: Notenspiegel berechnen
-Zurück zu: 20. November - ...
-Nach dem Sie nun wissen wie Formulare aufgebaut, die Eingaben über ein Form-Tag an den Webserver übermittelt und wie die Daten gespeichert werden, geht des darum Ihr Wissen anzuwenden.
+ï¿½bung/Aufgabe: Notenspiegel berechnen
+ZurÃ¼ck zu: 20. November - ...
+Nach dem Sie nun wissen wie Formulare aufgebaut, die Eingaben ï¿½ber ein Form-Tag an den Webserver ï¿½bermittelt und wie die Daten gespeichert werden, geht des darum Ihr Wissen anzuwenden.
 
-Erstellen Sie dazu eine neue Seite für das Speichern des eigenen Notenspiegels. Über ein Formular soll es möglich sein die Prüfungsergebnisse zu speichern. Das Formular weißt folgende Felder auf:
+Erstellen Sie dazu eine neue Seite fï¿½r das Speichern des eigenen Notenspiegels. ï¿½ber ein Formular soll es mï¿½glich sein die Prï¿½fungsergebnisse zu speichern. Das Formular weiï¿½t folgende Felder auf:
 
-Name der Prüfung
-Prüfungsdatum
+Name der Prï¿½fung
+Prï¿½fungsdatum
 Note
 Angabe ob die Note in Prozent ist oder nicht (Checkbox)
 Versuch (1,2,3) mit einem Selektfeld
 
 
-Im Tabellenfuß soll der akutelle Durchschnitt angezeigt werden. Die Tabelle soll sortierbar sein über das Datum und über den Namen (nutzen Sie dazu Queryparameter).
+Im Tabellenfuï¿½ soll der akutelle Durchschnitt angezeigt werden. Die Tabelle soll sortierbar sein ï¿½ber das Datum und ï¿½ber den Namen (nutzen Sie dazu Queryparameter).
 
 
 
 Tipp: 
-Verwenden Sie für die Datumsortierung ein Datumsobjekt bzw. konvertieren Sie die Eingabe in einen UNIX Timestamp zum Verlgeichen.
+Verwenden Sie fï¿½r die Datumsortierung ein Datumsobjekt bzw. konvertieren Sie die Eingabe in einen UNIX Timestamp zum Verlgeichen.
