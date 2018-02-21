@@ -1,10 +1,18 @@
+<!-- FRAGE: Wie löscht man sessions die nicht durch logout gelöscht wurden, da sich nicht manuell ausgeloggt wurde? Automatisch? -->
+
 <?php
 session_save_path(__DIR__.DIRECTORY_SEPARATOR.'data');  // savepath for sessiondata
 session_start();    // initialize session data
 
+<<<<<<< HEAD
 
 require_once './core/config.php'; // includes config
 require_once './core/functions.php'; // includes config
+=======
+// include config and functions to use them.
+require_once './core/config.php'; 
+require_once './core/functions.php'; 
+>>>>>>> 7b99a809fdfd83c6067f0a9a5993b52fbd5b2db0
 
 if(isset($_POST['submitLogin']))    // check if login is submitted
 {
@@ -15,7 +23,7 @@ if(isset($_POST['submitLogin']))    // check if login is submitted
         $_SESSION['user'] = $user;
     }
 }
-else if (isset($_POST['sumitLogout']))
+else if (isset($_POST['submitLogout']))
 {
     logOut();
 }
@@ -48,11 +56,16 @@ $page = isset($_GET['p']) ? $_GET['p'] : '';
     <?
     if($loggedIn)
     {
-        include (VIEWPATH.'site.php');
+        include (VIEWPATH.'site.php');  // When user is logged in, he gets the site.
+    }
+    elseif($page=='register')
+    {
+        include (VIEWPATH.'register.php');
+
     }
     else
     {
-        include (VIEWPATH.'login.php');
+        include (VIEWPATH.'login.php'); // When user isnt logged in, he gets the login page.
     }
     
     ?>
