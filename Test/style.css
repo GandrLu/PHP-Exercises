@@ -1,0 +1,15 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 800px;
+    height: 800px;
+    border: solid black 1px;
+}
+
+.tile {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}

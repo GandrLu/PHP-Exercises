@@ -1,12 +1,12 @@
 <?php
-session_save_path(__DIR__.DIRECTORY_SEPARATOR.'data');
-session_start();
+session_save_path(__DIR__.DIRECTORY_SEPARATOR.'data');  // savepath for sessiondata
+session_start();    // initialize session data
 
 
-require_once './core/config.php'; 
-require_once './core/functions.php'; 
+require_once './core/config.php'; // includes config
+require_once './core/functions.php'; // includes config
 
-if(isset($_POST['submitLogin']))
+if(isset($_POST['submitLogin']))    // check if login is submitted
 {
     $error = true;
     $user = logIn($error);
